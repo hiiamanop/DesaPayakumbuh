@@ -12,32 +12,32 @@
                 </a>
             </li><!-- End Dashboard Nav -->
 
-            <li class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link collapsed" href="/absensi">
-                    <i class="bi bi-card-list"></i>
-                    <span>Daftar Absensi</span>
+                  <i class="bi bi-card-list"></i>
+                  <span>Daftar Absensi</span>
                 </a>
-            </li><!-- End Register Page Nav -->
+              </li><!-- End Register Page Nav -->
 
-            <li class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link collapsed" href="/warga">
-                    <i class="bi bi-person"></i>
-                    <span>Daftar Warga</span>
+                  <i class="bi bi-person"></i>
+                  <span>Daftar Warga</span>
                 </a>
-            </li><!-- End Profile Page Nav -->
+              </li><!-- End Profile Page Nav -->
 
-            <li class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="/statisik">
-                    <i class="bi bi-bar-chart"></i><span>Statistik Kependudukan</span>
+                  <i class="bi bi-bar-chart"></i><span>Statistik Kependudukan</span>
                 </a>
-            </li><!-- End Charts Nav -->
+              </li><!-- End Charts Nav -->
 
-            <li class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link collapsed" href="administrasi">
-                    <i class="bi bi-envelope"></i>
-                    <span>Administrasi</span>
+                  <i class="bi bi-envelope"></i>
+                  <span>Administrasi</span>
                 </a>
-            </li><!-- End Contact Page Nav -->
+              </li><!-- End Contact Page Nav -->
 
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="">
@@ -79,16 +79,16 @@
                         Anda masuk sebagai <span
                             style="display: inline-block; padding: 5px 10px;
                         background-color: blue; color: #fff; font-weight: bold; border-radius: 4px;"
-                            class="badge">{{ Session('jabatan') }}</span>
+                            class="badge">{{ Session('jabatan') }}admin</span>
                     </p>
                 </div>
-
+               
                 <!-- Left side columns -->
                 <div>
                     <div class="row">
 
 
-
+                        
 
                         <!-- Recent Sales -->
                         <div class="col-12">
@@ -97,7 +97,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <h5 class="card-title">Bukti Surat Sakit Dokter</h5>
-
+        
                                         @if (Session::has('file_path'))
                                             <div class="preview-file">
                                                 <p>File yang baru dimasukkan:</p>
@@ -110,17 +110,16 @@
                                             <div class="row mb-3">
                                                 <label for="inputText" class="col-sm-2 col-form-label">Lampiran</label>
                                                 <div class="col-sm-10">
-                                                    <input type="file" value="" name="file_pdf"
-                                                        class="form-control" id="file_pdf" required>
+                                                    <input type="file" value="" name="file_pdf" class="form-control"
+                                                        id="file_pdf" required>
                                                 </div>
                                             </div>
-
+                                            
                                             <div class="row mb-3">
                                                 <label for="inputText" class="col-sm-2 col-form-label">Keterangan</label>
                                                 <div class="col-sm-10">
-                                                    <input type="text" value="" name="keterangan"
-                                                        class="form-control" id="keterangan" placeholder="Masukkan Teks...."
-                                                        required>
+                                                    <input type="text" value="" name="keterangan" class="form-control"
+                                                        id="keterangan" placeholder="Masukkan Teks...." required>
                                                 </div>
                                             </div>
                                             <div class="row mb-3">
@@ -139,7 +138,7 @@
 
                     </div>
                 </div>
-
+                
 
 
             </div>
