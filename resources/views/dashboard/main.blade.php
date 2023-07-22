@@ -2,8 +2,77 @@
 @section('isi')
     <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
+        @if (Session('role') == 1)
+            <ul class="sidebar-nav" id="sidebar-nav">
 
-        <ul class="sidebar-nav" id="sidebar-nav">
+                <li class="nav-item">
+                    <a class="nav-link " href="/dashboard">
+                        <i class="bi bi-grid"></i>
+                        <span>Beranda</span>
+                    </a>
+                </li><!-- End Dashboard Nav -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+                        <i class="bi bi-bar-chart"></i><span>Statistik Kependudukan</span>
+                    </a>
+                </li><!-- End Charts Nav -->
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="pages-contact.html">
+                        <i class="bi bi-envelope"></i>
+                        <span>Administrasi</span>
+                    </a>
+                </li><!-- End Contact Page Nav -->
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+                        <i class="bi bi-menu-button-wide"></i><span>Dokumen</span><i class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <ul id="components-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+                        <li>
+                            <a href="/arsip">
+                                <i class="bi bi-circle"></i><span>Arsip Dokumen</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/unggah">
+                                <i class="bi bi-circle"></i><span>Unggah Dokumen</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li><!-- End Components Nav -->
+            </ul>
+        @elseif (Session('role') == 2)
+            <ul class="sidebar-nav" id="sidebar-nav">
+
+                <li class="nav-item">
+                    <a class="nav-link " href="/dashboard">
+                        <i class="bi bi-grid"></i>
+                        <span>Beranda</span>
+                    </a>
+                </li><!-- End Dashboard Nav -->
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="/absensi">
+                        <i class="bi bi-card-list"></i>
+                        <span>Daftar Absensi</span>
+                    </a>
+                </li><!-- End Register Page Nav -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+                        <i class="bi bi-bar-chart"></i><span>Statistik Kependudukan</span>
+                    </a>
+                </li><!-- End Charts Nav -->
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="pages-contact.html">
+                        <i class="bi bi-envelope"></i>
+                        <span>Administrasi</span>
+                    </a>
+                </li><!-- End Contact Page Nav -->
+            </ul>
+        @endif
+        {{-- <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
                 <a class="nav-link " href="/dashboard">
@@ -56,8 +125,7 @@
                     </li>
                 </ul>
             </li><!-- End Components Nav -->
-        </ul>
-
+        </ul> --}}
     </aside><!-- End Sidebar-->
 
     <main id="main" class="main">
@@ -79,7 +147,7 @@
                         Anda masuk sebagai <span
                             style="display: inline-block; padding: 5px 10px;
                         background-color: blue; color: #fff; font-weight: bold; border-radius: 4px;"
-                            class="badge">{{ Session('jabatan') }}admin</span>
+                            class="badge">{{ Session('jabatan') }}</span>
                     </p>
                 </div>
                 <div>
@@ -107,7 +175,7 @@
                                                     Harap Melakukan Absensi Sebelum Pukul 09.00 WIB
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <a href="/masuk">
+                                                    <a href="/absensi">
                                                         <button type="button" class="btn btn-success">Masuk</button>
                                                     </a>
                                                     <a href="/izin">
