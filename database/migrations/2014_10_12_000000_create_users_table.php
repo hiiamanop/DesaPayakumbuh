@@ -16,6 +16,7 @@ return new class extends Migration {
             $table->string('jabatan', 50);
             $table->string('email', 50)->unique();
             $table->string('password');
+            $table->integer('role');
         });
     }
 
