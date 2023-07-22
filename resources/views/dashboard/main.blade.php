@@ -156,8 +156,11 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Absensi</h5>
-                                    <p>Lakukan Absensi Sebelum Pukul 09.00 WIB!</p>
-
+                                    @if ($currentTime > '03:00:00')
+                                        <p>Waktu Untuk Melakukan Absensi Telah Usai</p>
+                                    @else
+                                        <p>Lakukan Absensi Sebelum Pukul 09.00 WIB!</p>
+                                    @endif
                                     <!-- Basic Modal -->
                                     <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                                         data-bs-target="#basicModal">
@@ -172,16 +175,24 @@
                                                         aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    Harap Melakukan Absensi Sebelum Pukul 09.00 WIB
+                                                    @if ($currentTime > '03:00:00')
+                                                        Waktu Untuk Melakukan Absensi Telah Usai
+                                                    @else
+                                                        Harap Melakukan Absensi Sebelum Pukul 09.00 WIB
+                                                    @endif
                                                 </div>
-                                                <div class="modal-footer">
-                                                    <a href="/absensi">
-                                                        <button type="button" class="btn btn-success">Masuk</button>
-                                                    </a>
-                                                    <a href="/izin">
-                                                        <button type="button" class="btn btn-danger">Tidak Masuk</button>
-                                                    </a>
-                                                </div>
+                                                @if ($currentTime > '03:00:00')
+                                                @else
+                                                    <div class="modal-footer">
+                                                        <a href="/absensi">
+                                                            <button type="button" class="btn btn-success">Masuk</button>
+                                                        </a>
+                                                        <a href="/izin">
+                                                            <button type="button" class="btn btn-danger">Tidak
+                                                                Masuk</button>
+                                                        </a>
+                                                    </div>
+                                                @endif
                                             </div>
                                         </div>
                                     </div><!-- End Basic Modal-->
