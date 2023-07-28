@@ -18,13 +18,6 @@
                 </li><!-- End Charts Nav -->
 
                 <li class="nav-item">
-                    <a class="nav-link collapsed" href="pages-contact.html">
-                        <i class="bi bi-envelope"></i>
-                        <span>Administrasi</span>
-                    </a>
-                </li><!-- End Contact Page Nav -->
-
-                <li class="nav-item">
                     <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
                         <i class="bi bi-menu-button-wide"></i><span>Dokumen</span><i class="bi bi-chevron-down ms-auto"></i>
                     </a>
@@ -61,12 +54,6 @@
                     </a>
                 </li><!-- End Charts Nav -->
 
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="pages-contact.html">
-                        <i class="bi bi-envelope"></i>
-                        <span>Administrasi</span>
-                    </a>
-                </li><!-- End Contact Page Nav -->
             @elseif (Session('role') == 0)
                 <li class="nav-item">
                     <a class="nav-link " href="/dashboard">
@@ -83,24 +70,11 @@
                 </li><!-- End Register Page Nav -->
 
                 <li class="nav-item">
-                    <a class="nav-link collapsed" href="users-profile.html">
-                        <i class="bi bi-person"></i>
-                        <span>Daftar Warga</span>
-                    </a>
-                </li><!-- End Profile Page Nav -->
-
-                <li class="nav-item">
                     <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
                         <i class="bi bi-bar-chart"></i><span>Statistik Kependudukan</span>
                     </a>
                 </li><!-- End Charts Nav -->
 
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="pages-contact.html">
-                        <i class="bi bi-envelope"></i>
-                        <span>Administrasi</span>
-                    </a>
-                </li><!-- End Contact Page Nav -->
 
                 <li class="nav-item">
                     <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">

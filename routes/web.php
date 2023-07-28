@@ -39,4 +39,4 @@ Route::post('/unggahproses', [DocumentController::class, 'unggahproses']);
 
 //route absensi
 Route::get('/absensi', [AbsensiController::class, 'index']);
-Route::post('/absenproses', [DashboardController::class, 'absen']);
+Route::get('/absenproses', [DashboardController::class, 'absen']);

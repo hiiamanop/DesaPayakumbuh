@@ -18,13 +18,6 @@
                 </li><!-- End Charts Nav -->
 
                 <li class="nav-item">
-                    <a class="nav-link collapsed" href="pages-contact.html">
-                        <i class="bi bi-envelope"></i>
-                        <span>Administrasi</span>
-                    </a>
-                </li><!-- End Contact Page Nav -->
-
-                <li class="nav-item">
                     <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
                         <i class="bi bi-menu-button-wide"></i><span>Dokumen</span><i class="bi bi-chevron-down ms-auto"></i>
                     </a>
@@ -61,12 +54,6 @@
                     </a>
                 </li><!-- End Charts Nav -->
 
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="pages-contact.html">
-                        <i class="bi bi-envelope"></i>
-                        <span>Administrasi</span>
-                    </a>
-                </li><!-- End Contact Page Nav -->
             @elseif (Session('role') == 0)
                 <li class="nav-item">
                     <a class="nav-link " href="/dashboard">
@@ -83,24 +70,10 @@
                 </li><!-- End Register Page Nav -->
 
                 <li class="nav-item">
-                    <a class="nav-link collapsed" href="users-profile.html">
-                        <i class="bi bi-person"></i>
-                        <span>Daftar Warga</span>
-                    </a>
-                </li><!-- End Profile Page Nav -->
-
-                <li class="nav-item">
                     <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
                         <i class="bi bi-bar-chart"></i><span>Statistik Kependudukan</span>
                     </a>
                 </li><!-- End Charts Nav -->
-
-                <li class="nav-item">
-                    <a class="nav-link collapsed" href="pages-contact.html">
-                        <i class="bi bi-envelope"></i>
-                        <span>Administrasi</span>
-                    </a>
-                </li><!-- End Contact Page Nav -->
 
                 <li class="nav-item">
                     <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
@@ -139,7 +112,7 @@
         <section class="section dashboard">
             <div class="row">
                 <div class="User Greetings">
-                    <p>Selamat datang, <span id="nama user"><strong>{{ Session('nama') }}Sari</strong></span>
+                    <p>Selamat datang, <span id="nama user"><strong>{{ Session('nama') }}</strong></span>
                         Anda masuk sebagai <span
                             style="display: inline-block; padding: 5px 10px;
                         background-color: blue; color: #fff; font-weight: bold; border-radius: 4px;"
@@ -152,7 +125,7 @@
                             <div class="card">
                                 <div class="card-body">
                                     <h5 class="card-title">Absensi</h5>
-                                    @if ($currentTime > '05:00:00')
+                                    @if ($currentTime > '21:00:00')
                                         <p>Waktu Untuk Absen Sudah Berlalu</p>
                                     @else
                                         <p>Lakukan Absensi Sebelum Pukul 09.00 WIB!</p>
@@ -170,7 +143,7 @@
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                         aria-label="Close"></button>
                                                 </div>
-                                                @if ($currentTime > '05:00:00')
+                                                @if ($currentTime > '21:00:00')
                                                     <div class="modal-body">
                                                         Waktu Untuk Absen Sudah Berlalu
                                                     </div>
