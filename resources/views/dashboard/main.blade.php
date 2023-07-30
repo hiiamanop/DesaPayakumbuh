@@ -12,7 +12,7 @@
                     </a>
                 </li><!-- End Dashboard Nav -->
                 <li class="nav-item">
-                    <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+                    <a class="nav-link collapsed" href="/statistik">
                         <i class="bi bi-bar-chart"></i><span>Statistik Kependudukan</span>
                     </a>
                 </li><!-- End Charts Nav -->
@@ -49,7 +49,7 @@
                     </a>
                 </li><!-- End Register Page Nav -->
                 <li class="nav-item">
-                    <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+                    <a class="nav-link collapsed"  href="/statistik">
                         <i class="bi bi-bar-chart"></i><span>Statistik Kependudukan</span>
                     </a>
                 </li><!-- End Charts Nav -->
@@ -70,7 +70,7 @@
                 </li><!-- End Register Page Nav -->
 
                 <li class="nav-item">
-                    <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+                    <a class="nav-link collapsed"  href="/statistik">
                         <i class="bi bi-bar-chart"></i><span>Statistik Kependudukan</span>
                     </a>
                 </li><!-- End Charts Nav -->
@@ -242,7 +242,7 @@
                         <div class="col-12">
                             <div class="card top-selling overflow-auto">
                                 <div class="card-body pb-0">
-                                    <h5 class="card-title">Pemerintah Desa <span>| Peridode 2023-2028</span></h5>
+                                    <h5 class="card-title">Perangkat Desa <span>| Peridode 2023-2028</span></h5>
 
                                     <table class="table table-borderless">
                                         <thead>
@@ -273,7 +273,7 @@
                                                 <td>ISLAM</td>
                                                 <td>Kepala Desa</td>
                                                 <td>
-                                                    <a href="#" class="btn btn-sm btn-success">Ubah</a>
+                                                    <a href="/edit-perangkat" class="btn btn-sm btn-success">Ubah</a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -290,7 +290,7 @@
                                                 <td>ISLAM</td>
                                                 <td>Sekretaris Desa</td>
                                                 <td>
-                                                    <a href="#" class="btn btn-sm btn-success">Ubah</a>
+                                                    <a href="/edit-perangkat" class="btn btn-sm btn-success">Ubah</a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -307,7 +307,7 @@
                                                 <td>ISLAM</td>
                                                 <td>Kepala Divisi Teknologi</td>
                                                 <td>
-                                                    <a href="#" class="btn btn-sm btn-success">Ubah</a>
+                                                    <a href="/edit-perangkat" class="btn btn-sm btn-success">Ubah</a>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -324,7 +324,7 @@
                                                 <td>ISLAM</td>
                                                 <td>Kepala Divisi Administrasi</td>
                                                 <td>
-                                                    <a href="#" class="btn btn-sm btn-success">Ubah</a>
+                                                    <a href="/edit-perangkat" class="btn btn-sm btn-success">Ubah</a>
                                                 </td>
                                             </tr>
 
@@ -339,5 +339,5 @@
                     </div>
         </section>
 
-    </main><!-- End #main -->
+    </main><!-- End main -->
 @endsection

@@ -12,7 +12,7 @@
                     </a>
                 </li><!-- End Dashboard Nav -->
                 <li class="nav-item">
-                    <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+                    <a class="nav-link collapsed" href="/statistik">
                         <i class="bi bi-bar-chart"></i><span>Statistik Kependudukan</span>
                     </a>
                 </li><!-- End Charts Nav -->
@@ -49,7 +49,7 @@
                     </a>
                 </li><!-- End Register Page Nav -->
                 <li class="nav-item">
-                    <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+                    <a class="nav-link collapsed"  href="/statistik">
                         <i class="bi bi-bar-chart"></i><span>Statistik Kependudukan</span>
                     </a>
                 </li><!-- End Charts Nav -->
@@ -70,7 +70,7 @@
                 </li><!-- End Register Page Nav -->
 
                 <li class="nav-item">
-                    <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+                    <a class="nav-link collapsed"  href="/statistik">
                         <i class="bi bi-bar-chart"></i><span>Statistik Kependudukan</span>
                     </a>
                 </li><!-- End Charts Nav -->

@@ -12,7 +12,7 @@
                     </a>
                 </li><!-- End Dashboard Nav -->
                 <li class="nav-item">
-                    <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+                    <a class="nav-link collapsed" href="/statistik">
                         <i class="bi bi-bar-chart"></i><span>Statistik Kependudukan</span>
                     </a>
                 </li><!-- End Charts Nav -->
@@ -49,7 +49,7 @@
                     </a>
                 </li><!-- End Register Page Nav -->
                 <li class="nav-item">
-                    <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+                    <a class="nav-link collapsed"  href="/statistik">
                         <i class="bi bi-bar-chart"></i><span>Statistik Kependudukan</span>
                     </a>
                 </li><!-- End Charts Nav -->
@@ -70,7 +70,7 @@
                 </li><!-- End Register Page Nav -->
 
                 <li class="nav-item">
-                    <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+                    <a class="nav-link collapsed"  href="/statistik">
                         <i class="bi bi-bar-chart"></i><span>Statistik Kependudukan</span>
                     </a>
                 </li><!-- End Charts Nav -->
@@ -116,17 +116,13 @@
                         Anda masuk sebagai <span
                             style="display: inline-block; padding: 5px 10px;
                         background-color: blue; color: #fff; font-weight: bold; border-radius: 4px;"
-                            class="badge">{{ Session('jabatan') }}admin</span>
+                            class="badge">{{ Session('jabatan') }}</span>
                     </p>
                 </div>
 
                 <!-- Left side columns -->
                 <div>
                     <div class="row">
-
-
-
-
                         <!-- Recent Sales -->
                         <div class="col-12">
                             <div class="card recent-sales overflow-auto">

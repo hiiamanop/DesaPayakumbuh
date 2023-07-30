@@ -28,4 +28,9 @@ class DashboardController extends Controller
         Absen::create($data);
         return redirect()->back()->with('success', 'Berhasil Melakukan Absensi');
     }
+
+    public function editPerangkat()
+    {
+        return view('dashboard.perangkatDesa');
+    }
 }

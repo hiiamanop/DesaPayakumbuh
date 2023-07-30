@@ -4,6 +4,7 @@ use App\Http\Controllers\AbsensiController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DocumentController;
+use App\Http\Controllers\statistikController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,6 +32,7 @@ Route::get('/logout', [AuthController::class, 'logout']);
 // route dashboard
 Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::get('/izin', [DashboardController::class, 'izin']);
+Route::get('/edit-perangkat', [DashboardController::class, 'editPerangkat']);
 
 //route document
 Route::get('/arsip', [DocumentController::class, 'arsip']);
@@ -40,3 +42,7 @@ Route::post('/unggahproses', [DocumentController::class, 'unggahproses']);
 //route absensi
 Route::get('/absensi', [AbsensiController::class, 'index']);
 Route::get('/absenproses', [DashboardController::class, 'absen']);
+
+//route statistik
+Route::get('/statistik', [statistikController::class, 'index']);
+Route::get('/ubah-statistik', [statistikController::class, 'ubah']);

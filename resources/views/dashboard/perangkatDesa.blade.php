@@ -12,7 +12,7 @@
                     </a>
                 </li><!-- End Dashboard Nav -->
                 <li class="nav-item">
-                    <a class="nav-link collapsed"  href="/statistik">
+                    <a class="nav-link collapsed" href="#">
                         <i class="bi bi-bar-chart"></i><span>Statistik Kependudukan</span>
                     </a>
                 </li><!-- End Charts Nav -->
@@ -49,7 +49,7 @@
                     </a>
                 </li><!-- End Register Page Nav -->
                 <li class="nav-item">
-                    <a class="nav-link collapsed"  href="/statistik">
+                    <a class="nav-link collapsed"  href="#">
                         <i class="bi bi-bar-chart"></i><span>Statistik Kependudukan</span>
                     </a>
                 </li><!-- End Charts Nav -->
@@ -70,17 +70,11 @@
                 </li><!-- End Register Page Nav -->
 
                 <li class="nav-item">
-                    <a class="nav-link collapsed" href="users-profile.html">
-                        <i class="bi bi-person"></i>
-                        <span>Daftar Warga</span>
-                    </a>
-                </li><!-- End Profile Page Nav -->
-
-                <li class="nav-item">
-                    <a class="nav-link collapsed"  href="/statistik">
+                    <a class="nav-link collapsed" href="#">
                         <i class="bi bi-bar-chart"></i><span>Statistik Kependudukan</span>
                     </a>
                 </li><!-- End Charts Nav -->
+
 
                 <li class="nav-item">
                     <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
@@ -123,7 +117,7 @@
                         Anda masuk sebagai <span
                             style="display: inline-block; padding: 5px 10px;
                         background-color: blue; color: #fff; font-weight: bold; border-radius: 4px;"
-                            class="badge">{{ Session('jabatan') }}admin</span>
+                            class="badge">{{ Session('jabatan') }}</span>
                     </p>
                 </div>
 
@@ -140,31 +134,82 @@
 
                                 <div class="card">
                                     <div class="card-body">
-                                        <h5 class="card-title">Bukti Surat Sakit Dokter</h5>
-
-                                        @if (Session::has('file_path'))
-                                            <div class="preview-file">
-                                                <p>File yang baru dimasukkan:</p>
-                                                <iframe src="{{ Session::get('file_path') }}" width="100%"
-                                                    height="500"></iframe>
-                                            </div>
-                                        @endif
+                                        <h5 class="card-title">Edit Perangkat Desa</h5>
                                         <form method="POST" action="/unggahproses" enctype="multipart/form-data">
                                             @csrf
                                             <div class="row mb-3">
-                                                <label for="inputText" class="col-sm-2 col-form-label">Lampiran</label>
+                                                <label for="inputText" class="col-sm-2 col-form-label">Foto</label>
                                                 <div class="col-sm-10">
-                                                    <input type="file" value="" name="file_pdf"
-                                                        class="form-control" id="file_pdf" required>
+                                                    <input type="file" value="" name="foto"
+                                                        class="form-control" id="foto" required>
                                                 </div>
                                             </div>
-
                                             <div class="row mb-3">
-                                                <label for="inputText" class="col-sm-2 col-form-label">Keterangan</label>
+                                                <label for="inputText" class="col-sm-2 col-form-label">Nama</label>
                                                 <div class="col-sm-10">
-                                                    <input type="text" value="" name="keterangan"
-                                                        class="form-control" id="keterangan"
-                                                        placeholder="Masukkan Teks...." required>
+                                                    <input type="text" value="" name="nama"
+                                                        class="form-control" id="nama"
+                                                        placeholder="Masukkan Nama...." required>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="inputText" class="col-sm-2 col-form-label">NIP</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" value="" name="NIP"
+                                                        class="form-control" id="NIP"
+                                                        placeholder="Masukkan NIP...." required>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="inputText" class="col-sm-2 col-form-label">NIK</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" value="" name="NIK"
+                                                        class="form-control" id="NIK"
+                                                        placeholder="Masukkan NIK...." required>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="inputText" class="col-sm-2 col-form-label">Tempat, Tanggal Lahir</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" value="" name="ttl"
+                                                        class="form-control" id="ttl"
+                                                        placeholder="Masukkan TTL...." required>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="inputText" class="col-sm-2 col-form-label">Jenis Kelamin</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" value="" name="jk"
+                                                        class="form-control" id="jk"
+                                                        placeholder="Masukkan Jenis Kelamis...." required>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="inputText" class="col-sm-2 col-form-label">Golongan Darah</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" value="" name="goldar"
+                                                        class="form-control" id="goldar"
+                                                        placeholder="Masukkan Golongan Darah...." required>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="inputText" class="col-sm-2 col-form-label">Agama</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" value="" name="agama"
+                                                        class="form-control" id="agama"
+                                                        placeholder="Masukkan Agama...." required>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="inputText" class="col-sm-2 col-form-label">Jabatan</label>
+                                                <div class="col-sm-10">
+                                                    <select name="jabatan" id="jabatan" class="form-control">
+                                                        <option disabled selected value>Masukan Jabatan...</option>
+                                                        <option value="0">Kepala Desa</option>
+                                                        <option value="1">Sekretaris</option>
+                                                        <option value="2">Kepala Divisi</option>
+                                                        <option value="3">Staff</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="row mb-3">
